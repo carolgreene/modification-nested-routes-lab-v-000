@@ -12,9 +12,9 @@ module ArtistsHelper
     #end
   #end
 
-  def artist_select(song, artist)
+  def artist_select(artist, song)
     if artist
-      song.artist.name
+      artist.name
     else
       select_tag "song[artist_id]",
       options_from_collection_for_select(Artist.all, :id, :name)
