@@ -13,7 +13,7 @@ module ArtistsHelper
   end
 
   def artist_select(song, artist)
-    if nested
+    if artist 
       song.artist.name
     else
       select_tag "song[artist_id]",
